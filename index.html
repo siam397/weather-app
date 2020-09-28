@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Today</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+    <!-- PRE LOADER -->
+    <section class="preloader">
+      <div class="spinner">
+        <span class="spinner-rotate"></span>
+      </div>
+    </section>
+    <!-- PRE LOADER -->
+    <div class="header">
+      <a href="#" class="logo1"
+        ><img src="img/logo.png" alt="logo" class="logo"
+      /></a>
+      <a href="#default" class="title1">WEATHER TODAY!</a>
+      <div class="header-right">
+        <a href="https://www.github.com" class="git">Github</a>
+      </div>
+    </div>
+    <h1 class="in">Weather In:</h1>
+    <!--Search button-->
+    <form class="search-bar" autocomplete="off" id="submit">
+      <input type="search" name="search" pattern=".*\S.*" id="search" required />
+      <button class="search-btn" type="submit">
+        <span>Search</span>
+      </button>
+    </form>
+    <!--Search button-->
+    <div class="mainDiv">
+      <div style="position: relative" class="upperHalf">
+        <h1 id="city" style="text-align: center; padding-top: 15px;text-transform: uppercase; font-family: 'Lato';"></h1>
+        <h6 id="country" style="text-align: center; text-transform: uppercase;"></h6>
+        <h3 style="text-align: center;" class="time">Time&nbsp;- <span id="time"></span></h3>
+      </div>
+      <div class="lowerDiv">
+        <div class="ms">
+          <div class="msLeft">
+            <p>Temperature:</p>
+            <h3><span id="temp"></span>°C</h3>
+          </div>
+          <div class="msRight">
+            <img class="weather" id="weather" src="" alt="img" />
+            <h3 id="condition">ThunderStorm</h3>
+          </div>
+        </div>
+
+        <div class="ss">
+          <div class="firstLi">
+            <p>Feels like:</p>
+            <h3><span id="feelsLike"></span>°C</h3>
+          </div>
+          <div class="secondLi">
+            <p>Pressure:</p>
+            <h3><span id="pressure"></span>atm</h3>
+          </div>
+        </div>
+
+        <div class="humidity">
+          <h3><span id="humidity"></span>%</h3>
+          <h5 style="font-size: 30px;font-weight: 400;">Humidity</h5>
+        </div>
+      </div>
+    </div>
+
+    <script src="jquery.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
